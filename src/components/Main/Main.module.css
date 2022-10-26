@@ -5,12 +5,20 @@
   flex: 1 0 auto;
   background-color: #0079bf;
   padding: 20px 20px 32px 20px;
+  height: calc(100% - 110px);
+  overflow: auto;
 }
-@media (max-width: 1180px) {
+@media (max-width: 450px) {
   .main {
     flex-direction: column;
     width: 100%;
     align-items: center;
+    overflow: auto;
+  }
+}
+@media (max-width: 1180px) {
+  .main {
+    width: 100%;
     overflow: auto;
   }
 }

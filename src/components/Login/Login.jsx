@@ -27,9 +27,9 @@ export default function Login() {
   const showDiv = useDelayUnmount(isMounted, 250);
 
   return (
-    <div className={style.login_wrapper}>
+    <div className={style.login_wrapper} onClick={() => setIsMounted(!isMounted)}>
       <img src={UserAvatar} alt="user avatar" className={style.user_avatar} />
-      <div onClick={() => setIsMounted(!isMounted)} className={isMounted ? style.icon + ' ' + style.isopen : style.icon} />
+      <div className={isMounted ? style.icon + ' ' + style.isopen : style.icon} />
       {showDiv &&
         <div
           className={style.login_dropdown}

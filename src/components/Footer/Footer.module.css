@@ -12,10 +12,8 @@
   line-height: 21px;
   color: #ffffff;
   flex: 0 0 auto;
-  max-width: 1235px;
   width: 100%;
-  /* position: fixed;
-  bottom: 0; */
+  height: 55px;
 }
 .tasks_statistic {
   display: flex;
@@ -23,4 +21,9 @@
 }
 .tasks_statistic p:first-child {
   margin-right: 36px;
+}
+@media (max-width: 650px) {
+  .footer {
+    display: none;
+  }
 }

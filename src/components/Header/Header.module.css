@@ -6,6 +6,7 @@
   padding: 11px 22px 8px 20px;
   align-items: center;
   flex: 0 0 auto;
+  height: 55px;
 }
 .header_title {
   font-style: normal;
@@ -13,4 +14,12 @@
   font-size: 28px;
   line-height: 33px;
   color: #ffffff;
+}
+@media (max-width: 450px) {
+  .header {
+    flex-direction: row-reverse;
+  }
+  .header_title {
+    display: none;
+  }
 }
