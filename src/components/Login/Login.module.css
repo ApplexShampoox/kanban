@@ -1,4 +1,5 @@
 .login_wrapper {
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -18,4 +19,56 @@
 }
 .icon.isopen {
   transform: rotate3d(1, 0, 0, 180deg);
+}
+.login_dropdown {
+  background-color: #fff;
+  border-radius: 5px;
+  position: absolute;
+  top: 55px;
+  left: -90px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: all 0.5s ease;
+}
+
+.login_dropdown:after {
+  border: 10px solid transparent;
+  border-bottom-color: #fff;
+  position: absolute;
+  bottom: 100%;
+  right: 18px;
+  content: "";
+}
+
+.login_dropdown_button {
+  padding: 10px 80px 10px 10px;
+  border-radius: 5px;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  font-family: "Roboto";
+  font-size: 14px;
+  line-height: 16px;
+}
+
+@keyframes inAnimation {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes outAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
