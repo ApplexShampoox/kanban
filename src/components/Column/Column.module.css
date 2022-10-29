@@ -17,15 +17,7 @@
   line-height: 21px;
   color: #000000;
 }
-.column_textarea {
-  display: block;
-  width: 100%;
-  background-color: #fff;
-  padding: 7px 9px;
-  margin: 0 0 15px 0;
-  border-radius: 5px;
-  border: none;
-}
+
 .column_add_button {
   padding: 4px 6px;
   border: none;
