@@ -22,6 +22,8 @@
   line-height: 21px;
   max-width: 621px;
   text-align: start;
+  border: none;
+  resize: none;
 }
 .details_close_btn {
   cursor: pointer;
@@ -29,4 +31,10 @@
 }
 .details_close_btn:hover {
   transform: rotate(90deg);
+}
+.details_not_found {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }

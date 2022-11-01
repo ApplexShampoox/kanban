@@ -24,7 +24,9 @@ const Column = ({ title, type, tasks, addNewTask }) => {
       <h2 className={style.column_title}>{title}</h2>
       {tasks.map(task => {
         return (
-          <Link key={task.id} className={style.task_list_element}>{task.title}</Link>
+          <Link to={`/tasks/${task.id}`} className={style.link} >
+            <div key={task.id} className={style.task_list_element}>{task.title}</div>
+          </Link>
         )
       })}
       {addCard && type === LIST_TYPES.BACKLOG && <FormAddTask formSubmit={formSubmit} setAddCard={setAddCard} />}

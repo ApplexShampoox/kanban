@@ -59,10 +59,11 @@
   padding: 7px 9px;
   margin-bottom: 15px;
   border-radius: 5px;
+}
+.link {
   color: inherit;
   text-decoration: inherit;
 }
-
 @media (max-width: 450px) {
   .column {
     margin-right: 0;

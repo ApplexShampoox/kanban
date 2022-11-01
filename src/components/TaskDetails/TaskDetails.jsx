@@ -1,13 +1,38 @@
 import style from './TaskDetails.module.css'
 import { ReactComponent as CloseDetails } from '../../images/closeDetails.svg';
-const TaskDetails = ({ title, description }) => {
-  return (<div className={style.details_wrapper}>
-    <div className={style.details_header}>
-      <h2 className={style.details_title}>Main page – performance issues</h2>
-      <CloseDetails className={style.details_close_btn} />
+import { Link, useParams } from 'react-router-dom';
+
+const TaskDetails = ({ tasks, setTasks }) => {
+  const { taskId } = useParams();
+  const task = tasks.find(task => task.id === taskId)
+
+  const handleChange = (e) => {
+    const updatedTasks = tasks.map(task => {
+      if (task.id === taskId) {
+        return { ...task, description: e.target.value }
+      }
+      return task
+    })
+    setTasks(updatedTasks)
+  }
+  return (
+    <div className={style.details_wrapper} onclick={handleChange}>
+      {task ? (<>
+        <div className={style.details_header}>
+          <h2 className={style.details_title}>{task.title}</h2>
+          <Link to='/'><CloseDetails className={style.details_close_btn} /></Link>
+        </div>
+        <textarea className={style.details_description}>{task.description || "This task has no description"}</textarea>
+        <button onclick={handleChange}>Save</button>
+      </>
+      ) : (<div className={style.details_not_found} >
+        <h2 className={style.details_title}>Task with ID {taskId} not found</h2>
+        <Link to='/'><CloseDetails className={style.details_close_btn} /></Link>
+      </div>
+      )
+      }
     </div>
-    <p className={style.details_description}> Это был темный лес, издали казавшийся непроходимым.Там Пахапиль охотился, глушил рыбу, спал на еловых ветках.Короче – жил, пока русские не выгнали оккупантов.А когда немцы ушли, Пахапиль вернулся.Он появился в Раквере, где советский капитан наградил его медалью.Медаль была украшена четырьмя непонятными словами, фигурой и восклицательным знаком.  </p>
-  </div>);
+  );
 }
 
 export default TaskDetails;
