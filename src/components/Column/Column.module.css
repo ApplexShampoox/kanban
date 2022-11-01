@@ -1,4 +1,7 @@
 .column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   background-color: #ebecf0;
   height: fit-content;
   min-width: 282px;
@@ -16,6 +19,7 @@
   font-size: 18px;
   line-height: 21px;
   color: #000000;
+  margin-bottom: 15px;
 }
 
 .column_add_button {
@@ -29,16 +33,13 @@
   background-color: transparent;
   border-radius: 5px;
   cursor: pointer;
-}
-.active {
-  color: #fff;
-  background-color: #0079bf;
-}
-.column_add_button:not(.active):hover {
   transition: background-color 0.5s ease-in-out;
+}
+
+.column_add_button:hover {
   background-color: #fff;
 }
-.column_add_button:not(.active)::before {
+.column_add_button::before {
   content: "";
   position: relative;
   float: left;
@@ -53,10 +54,13 @@
   list-style-type: none;
 }
 .task_list_element {
+  width: 100%;
   background-color: #fff;
   padding: 7px 9px;
-  margin: 15px 0;
+  margin-bottom: 15px;
   border-radius: 5px;
+  color: inherit;
+  text-decoration: inherit;
 }
 
 @media (max-width: 450px) {

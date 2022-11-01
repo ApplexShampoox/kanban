@@ -1,17 +1,20 @@
 // import { Route, Routes } from "react-router-dom";
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
 import Main from "./components/Main/Main";
 import { useState } from "react";
 import data from "./mock.json"
+import { Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout/Layout";
 function App() {
   const [tasks, setTasks] = useState(data);
+
   return (
-    <div className="App">
-      <Header />
-      <Main tasks={tasks} setTasks={setTasks} />
-      <Footer activeTasks={8} finishedTasks={8} />
-    </div>
+
+    <Routes>
+      <Route path='/' element={<Layout tasks={tasks} setTasks={setTasks} />}>
+        <Route index element={<Main tasks={tasks} setTasks={setTasks} />} />
+      </Route>
+    </Routes>
+
   );
 }
 

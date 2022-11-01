@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { LIST_TYPES } from '../../config';
 import FormAddTask from '../FormAddTask/FormAddTask';
 import style from './Column.module.css'
@@ -18,13 +19,12 @@ const Column = ({ title, type, tasks, addNewTask }) => {
 
 
 
-
   return (
     <div className={style.column}>
       <h2 className={style.column_title}>{title}</h2>
       {tasks.map(task => {
         return (
-          <div key={task.id} className={style.task_list_element}>{task.title}</div>
+          <Link key={task.id} className={style.task_list_element}>{task.title}</Link>
         )
       })}
       {addCard && type === LIST_TYPES.BACKLOG && <FormAddTask formSubmit={formSubmit} setAddCard={setAddCard} />}

@@ -1,0 +1,32 @@
+.details_wrapper {
+  width: 100%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+.details_header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+.details_title {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+}
+.details_description {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  max-width: 621px;
+  text-align: start;
+}
+.details_close_btn {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+.details_close_btn:hover {
+  transform: rotate(90deg);
+}
