@@ -64,6 +64,9 @@
   color: inherit;
   text-decoration: inherit;
 }
+.empty_column {
+  margin-bottom: 17px;
+}
 @media (max-width: 450px) {
   .column {
     margin-right: 0;
