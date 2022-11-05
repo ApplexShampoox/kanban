@@ -1,4 +1,7 @@
 .details_wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   padding: 20px;
   background-color: #fff;
@@ -17,6 +20,7 @@
   line-height: 28px;
 }
 .details_description {
+  /* height: 100%; */
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;

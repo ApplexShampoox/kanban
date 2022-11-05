@@ -4,7 +4,9 @@ import { LIST_TYPES } from '../../config';
 import FormAddTask from '../FormAddTask/FormAddTask';
 import style from './Column.module.css'
 
-const Column = ({ title, type, tasks, addNewTask, allTasks }) => {
+const Column = ({ title, type, tasks, addNewTask, allTasks, setTasks }) => {
+
+
 
   const [addCard, setAddCard] = useState(false);
   const toggleAddCard = () => {
@@ -13,6 +15,9 @@ const Column = ({ title, type, tasks, addNewTask, allTasks }) => {
   const formSubmit = (title) => {
     addNewTask(title)
   }
+
+
+
 
   return (
     <div className={style.column}>
@@ -29,13 +34,13 @@ const Column = ({ title, type, tasks, addNewTask, allTasks }) => {
       {addCard && type === LIST_TYPES.IN_PROGRESS &&
         <form onSubmit={(e) => {
           e.preventDefault();
-          setAddCard(false)
+          setAddCard(false);
         }
-        }>
+        } className={style.option}>
           <select>
-            {allTasks.filter(task => task.status === "backlog").map((task) => { return <option key={task.id}>{task.title}</option> })}
+            {allTasks.filter(task => task.status === "backlog").map((task) => { return <option key={task.id} >{task.title} </option> })}
           </select>
-          <button className={style.column_add_button} type='submit'>Submit</button>
+          <button className={style.column_add_button} type='submit' >Submit</button>
         </form>
       }
       {addCard && type === LIST_TYPES.READY && <form onSubmit={(e) => {

@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: flex-start;
   background-color: #ebecf0;
-  height: fit-content;
+  max-height: 100%;
   min-width: 282px;
   border-radius: 10px;
   padding: 15px 12px;
@@ -13,6 +13,7 @@
   font-size: 18px;
   line-height: 21px;
   color: #000000;
+  overflow: auto;
 }
 .column_title {
   font-weight: 400;
@@ -54,21 +55,39 @@
   list-style-type: none;
 }
 .task_list_element {
+  word-wrap: break-word;
+  overflow: hidden;
   width: 100%;
   background-color: #fff;
   padding: 7px 9px;
   margin-bottom: 15px;
   border-radius: 5px;
 }
+
 .link {
+  width: 100%;
   color: inherit;
   text-decoration: inherit;
 }
 .empty_column {
   margin-bottom: 17px;
 }
+.option {
+  width: 100%;
+  overflow: auto;
+}
+.option > select {
+  width: 100%;
+  overflow: auto;
+}
+.option > select > option {
+  max-width: 100%;
+  overflow: auto;
+}
 @media (max-width: 450px) {
   .column {
+    overflow: unset;
+    height: 100%;
     margin-right: 0;
     width: 90%;
   }

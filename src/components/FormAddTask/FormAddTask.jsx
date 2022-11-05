@@ -18,7 +18,7 @@ const FormAddTask = ({ formSubmit, setAddCard }) => {
 
   }
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className={style.column_form}>
       <input
         type='text'
         id='taskTitle'
