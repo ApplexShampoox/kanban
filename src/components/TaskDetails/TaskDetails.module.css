@@ -20,7 +20,7 @@
   line-height: 28px;
 }
 .details_description {
-  /* height: 100%; */
+  padding: 5px;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
