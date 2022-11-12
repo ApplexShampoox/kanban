@@ -19,20 +19,27 @@ const TaskDetails = ({ tasks, setTasks }) => {
     setTasks(tasksCopy);
   }
 
-
-
   return (
     <div className={style.details_wrapper} >
       {task ? (<>
         <div className={style.details_header}>
           <h2 className={style.details_title}>{task.title}</h2>
-          <Link to='/'><CloseDetails className={style.details_close_btn} /></Link>
+          <Link to='/'>
+            <CloseDetails className={style.details_close_btn} />
+          </Link>
         </div>
-        <textarea className={style.details_description} onChange={(e) => { setDescription(e.target.value) }} onFocus={() => { description === "This task has no description" && setDescription('') }} onBlur={addDescription} value={description} />
+        <textarea
+          className={style.details_description}
+          onChange={(e) => { setDescription(e.target.value) }}
+          onFocus={() => { description === "This task has no description" && setDescription('') }}
+          onBlur={addDescription}
+          value={description} />
       </>
       ) : (<div className={style.details_not_found} >
         <h2 className={style.details_title}>Task with ID {taskId} not found</h2>
-        <Link to='/'><CloseDetails className={style.details_close_btn} /></Link>
+        <Link to='/'>
+          <CloseDetails className={style.details_close_btn} />
+        </Link>
       </div>
       )
       }

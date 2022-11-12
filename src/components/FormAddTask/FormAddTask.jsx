@@ -15,7 +15,6 @@ const FormAddTask = ({ formSubmit, setAddCard }) => {
       formSubmit(values.title);
       setAddCard(false);
     }
-
   }
   return (
     <form onSubmit={handleSubmit} className={style.column_form}>

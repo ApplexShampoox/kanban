@@ -15,7 +15,6 @@ function useDelayUnmount(isMounted, delayTime) {
   }, [isMounted, delayTime, showDiv]);
   return showDiv;
 }
-
 const mountedStyle = { animation: "inAnimation 250ms ease-in" };
 const unmountedStyle = {
   animation: "outAnimation 270ms ease-out",

@@ -3,8 +3,7 @@ import Column from '../Column/Column';
 import uniqid from 'uniqid';
 
 const Main = ({ tasks, setTasks }) => {
-
-  const addNewTask = (title, description) => {
+  const addNewTask = (title) => {
     const newTask = {
       id: uniqid(),
       title,
@@ -22,7 +21,7 @@ const Main = ({ tasks, setTasks }) => {
           const listTasks = tasks.filter(task => task.status === type)
           const prevTaskList =
             tasks.filter(task => task.status === Object.values(LIST_TYPES)[(Object.values(LIST_TYPES).indexOf(type) - 1)]);
-
+          const prevColumnName = Object.values(LIST_TYPES)[(Object.values(LIST_TYPES).indexOf(type) - 1)]
           return (
             <Column
               key={type}
@@ -33,6 +32,7 @@ const Main = ({ tasks, setTasks }) => {
               addNewTask={addNewTask}
               setTasks={setTasks}
               prevTaskList={prevTaskList}
+              prevColumnName={prevColumnName}
             />
           )
         })

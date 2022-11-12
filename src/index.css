@@ -26,7 +26,6 @@ textarea {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -38,11 +37,9 @@ code {
   display: flex;
   flex-direction: column;
 }
-
 #root {
   height: 100%;
 }
-
 @keyframes inAnimation {
   0% {
     opacity: 0;
@@ -53,7 +50,6 @@ code {
     visibility: visible;
   }
 }
-
 @keyframes outAnimation {
   0% {
     opacity: 1;
