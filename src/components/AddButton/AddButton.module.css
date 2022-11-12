@@ -11,7 +11,12 @@
   cursor: pointer;
   transition: background-color 0.5s ease-in-out;
 }
-
+.column_add_button[disabled] {
+  cursor: not-allowed;
+}
+.column_add_button[disabled]:hover {
+  background-color: unset;
+}
 .column_add_button:hover {
   background-color: #fff;
 }
