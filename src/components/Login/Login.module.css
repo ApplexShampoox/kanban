@@ -31,7 +31,12 @@
   align-items: flex-start;
   transition: all 0.5s ease;
 }
-
+.icon:hover {
+  animation: bounce 1s;
+}
+.icon.isopen:hover {
+  animation: none;
+}
 .login_dropdown:after {
   border: 10px solid transparent;
   border-bottom-color: #fff;
@@ -54,4 +59,24 @@
 }
 .login_dropdown_button:hover {
   color: #0079bf;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  60%,
+  100% {
+    transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+
+  80% {
+    transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
 }

@@ -5,13 +5,13 @@ import { useState } from 'react';
 
 const TaskDetails = ({ tasks, setTasks }) => {
   const { taskId } = useParams();
-  const task = tasks.find(task => task.id === taskId)
+  const task = JSON.parse(window.localStorage.getItem('tasks')).find(task => task.id === taskId)
 
   const [description, setDescription] = useState(task.description ? task.description : "This task has no description");
 
   const addDescription = () => {
     const tasksCopy = tasks.map(el => {
-      if (el.if === task.if) {
+      if (el.id === task.id) {
         el.description = description
       }
       return el

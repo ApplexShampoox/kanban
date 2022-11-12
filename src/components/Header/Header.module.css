@@ -18,6 +18,7 @@
 @media (max-width: 450px) {
   .header {
     flex-direction: row-reverse;
+    background-color: #0079bf;
   }
   .header_title {
     display: none;

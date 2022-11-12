@@ -17,12 +17,26 @@ const Main = ({ tasks, setTasks }) => {
 
   return (
     <>
-      {Object.values(LIST_TYPES).map(type => {
-        const listTasks = tasks.filter(task => task.status === type)
-        return (
-          <Column key={type} type={type} title={LIST_COPY[type]} allTasks={tasks} tasks={listTasks} addNewTask={addNewTask} setTasks={setTasks} />
-        )
-      })}
+      {
+        Object.values(LIST_TYPES).map((type) => {
+          const listTasks = tasks.filter(task => task.status === type)
+          const prevTaskList =
+            tasks.filter(task => task.status === Object.values(LIST_TYPES)[(Object.values(LIST_TYPES).indexOf(type) - 1)]);
+
+          return (
+            <Column
+              key={type}
+              type={type}
+              title={LIST_COPY[type]}
+              allTasks={tasks}
+              tasks={listTasks}
+              addNewTask={addNewTask}
+              setTasks={setTasks}
+              prevTaskList={prevTaskList}
+            />
+          )
+        })
+      }
     </>
   );
 }

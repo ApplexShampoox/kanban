@@ -22,6 +22,9 @@
 .tasks_statistic p:first-child {
   margin-right: 36px;
 }
+.telegram {
+  color: #ffffff;
+}
 @media (max-width: 650px) {
   .footer {
     display: none;

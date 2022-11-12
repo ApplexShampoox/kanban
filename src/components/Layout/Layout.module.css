@@ -23,6 +23,7 @@
 @media (max-width: 450px) {
   .main {
     height: calc(100% - 55px);
+    /* padding-top: 100px; */
     overflow: auto;
     flex-direction: column;
     align-items: center;
