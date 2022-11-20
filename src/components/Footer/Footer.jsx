@@ -8,7 +8,7 @@ const Footer = ({ tasks }) => {
         <p>Active tasks: {tasks.filter(task => task.status === "backlog").length}</p>
         <p>Finished tasks: {tasks.filter(task => task.status === "done").length}</p>
       </div>
-      <p>Kanban board by <a className={style.telegram} href='https://t.me/applexshampoox'>Pavel Bolotov</a>, 2022</p>
+      <p className={style.contacts}>Kanban board by <a className={style.telegram} href='https://t.me/applexshampoox'>Pavel Bolotov</a>, 2022</p>
     </footer>
   );
 }

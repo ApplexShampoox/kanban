@@ -26,6 +26,11 @@
   color: #ffffff;
 }
 @media (max-width: 650px) {
+  .contacts {
+    display: none;
+  }
+}
+@media (max-width: 450px) {
   .footer {
     display: none;
   }

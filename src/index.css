@@ -32,13 +32,12 @@ code {
 }
 .App {
   height: 100%;
-  max-width: 1235px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
 #root {
   height: 100%;
+  background-color: #0079bf;
 }
 @keyframes inAnimation {
   0% {
